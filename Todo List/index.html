@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./todolist.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>TodoList</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                      <label for="icon_prefix2" id="lab">Task</label>
+                    </div>
+                    <a class="waves-effect waves-light btn-small" onclick="addTask()">Add</a>
+                  </div>
+                </form>
+              </div>
+              <div class="tasks">
+                  <div id="warning-message"></div>
+                <table class="centered">
+                    <thead>
+                      <tr>
+                          <th>Task</th>
+                          <th>Data</th>
+                          <th>Del/Edit</th>
+                      </tr>
+                    </thead>
+                    <tbody id="todoDiv">
+                    </tbody>
+                  </table>
+                  <div id="footer"></div>
+              </div>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>
