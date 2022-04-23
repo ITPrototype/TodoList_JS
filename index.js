@@ -1,5 +1,5 @@
 let numid = 1
-let today = new Date()
+
 let todoList = []
 
 class Task {
@@ -21,7 +21,6 @@ function generateHtml(task){
     </tr>
     `
 }
-// <a class="waves-effect waves-light btn yellow"><i class="fa-solid fa-pen-to-square"></i></a>
 
 // Local Storage
 function syncToLoc(){
@@ -60,6 +59,7 @@ function addTask(){
         labels.innerHTML = 'Task'
         task.style.border = 'none'
         task.style.borderBottom = '1px solid gray'
+        let today = new Date()
         todoList.push({
             taskName:task.value,
             data: today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(),
@@ -97,7 +97,7 @@ function deleteTask(id){
     if(isConfirmed){
         const index = todoList.findIndex(a=>a.id===id)
         const deletedTask = todoList.splice(index,1)
-        console.log(deletedTask);
+        console.log('Deleted task:',deletedTask);
         syncToLoc()
         reload()
         checkNone()
